@@ -20,7 +20,7 @@ const [email, setEmail] = useState('');
   // Add an effect to update the alert position based on scroll position
 useEffect(() => {
   const handleScroll = () => {
-    const scrollY = window.scrollY || window.pageYYOffset;
+    const scrollY = window.scrollY || window.pageYOffset;
     setAlertPosition({ top: scrollY, left: 0 });
   };
 
@@ -33,7 +33,7 @@ useEffect(() => {
   };
 }, []);
 
-const handleEmailChange = (event) => {
+const handleEmailChange = (event : any) => {
     setEmail(event.target.value);
     setIsEmailValid(true);
     // Hide the "Already subscribed" alert when the user changes their email.
@@ -41,7 +41,7 @@ const handleEmailChange = (event) => {
   };
 
 
-const handleNotifyMeClick = async (event) => {
+const handleNotifyMeClick = async (event : any) => {
     event.preventDefault();
 
     // Validate the email 
@@ -70,9 +70,14 @@ const handleNotifyMeClick = async (event) => {
         setShowErrorAlert(false);
 
         // Redirect to the Discord invite link 
-        const discordLink =  process.env.NEXT_PUBLIC_DISCORD_LINK
+        const discordLink: string | undefined = process.env.NEXT_PUBLIC_DISCORD_LINK;
 
-        window.location.href =  discordLink 
+        if (discordLink) {
+          window.location.href = discordLink;
+        } else {
+          console.error("DISCORD_LINK is not defined in your environment variables.");
+        }
+
         // window.location.href = "https://discord.gg/Amhjsqrc";
       } else {
         // Handle error response from the API.
@@ -117,7 +122,7 @@ const handleNotifyMeClick = async (event) => {
   {
     name: 'Instagram',
     href: 'https://instagram.com/docstop.co?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr',
-    icon: (props) => (
+    icon: (props : any) => (
       <svg className='flex items-center' fill="currentColor" width="24" height="24" viewBox="0 0 24 24" {...props} style={{ width: '24px', height: '24px', marginRight: '8px' }}>
         <path
           fillRule="evenodd"
@@ -130,7 +135,7 @@ const handleNotifyMeClick = async (event) => {
   {
       name: 'YouTube',
       href: SOCIAL_LINKS.YOUTUBE,
-      icon: (props) => (
+      icon: (props : any) => (
         <svg className='flex items-center' fill="currentColor" width="24" height="24" viewBox="0 0 24 24" {...props} style={{ width: '24px', height: '24px', marginRight: '8px' }}>
           <path
             fillRule="evenodd"
