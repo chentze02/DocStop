@@ -8,6 +8,8 @@ import LogoDocstop from "@/images/LogoDocStop.png";
 import Image from 'next/image';
 import { Template } from '../../node_modules/heroicons-react/build/index';
 import LeadershipSection from '@/components/Landing/Team';
+import Partners from '@/components/Landing/Partners';
+import FAQ from '@/components/Landing/Faq';
 
 export default function Landing() {
   return (
@@ -31,6 +33,7 @@ export default function Landing() {
           <div className="px-4 sm:px-0">
             <JoinWaitlistCard />
             <LeadershipSection />
+            <FAQ />
           </div>
         </div>
       </div>

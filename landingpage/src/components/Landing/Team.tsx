@@ -1,6 +1,7 @@
 import React from 'react';
 import ChenPhoto from "@/images/ChenPhoto.png"; 
 import KrishPhoto from "@/images/KrishPhoto.jpg"; 
+import AnanPhoto from "@/images/anan.jpg"; 
 import Image from 'next/image';
 
 const people = [
@@ -13,6 +14,11 @@ const people = [
     name: 'Krish Shah',
     role: 'Software Lead',
     image: KrishPhoto,
+  },
+  {
+    name: 'Anan Wang',
+    role: 'Head of Growth',
+    image: AnanPhoto,
   },
 
   // More people...
