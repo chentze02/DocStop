@@ -266,7 +266,7 @@ const handleNotifyMeClick = async (event : any) => {
             </p>
 
              <div className='pt-6'>
-             <a href="https://www.instagram.com/docstop/"  target="_blank" rel="noopener noreferrer">
+             <a href="https://instagram.com/docstop.co?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr"  target="_blank" rel="noopener noreferrer">
   <button
     className="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
   >
