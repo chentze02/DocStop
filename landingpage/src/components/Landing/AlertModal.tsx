@@ -71,7 +71,7 @@ export default function AlertModal({
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        We have not released that page to the public yet. Join our Discord and email list to be the first to know when we release that feature.
+                        We have not released that page to the public yet. Join our email list to be the first to know when we release that feature.
                       </p>
                     </div>
                   </div>
