@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const FAQ = () => {
   const [expanded, setExpanded] = useState(Array(3).fill(false)); // Assuming there are 3 FAQs
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index : any) => {
     const newExpanded = [...expanded];
     newExpanded[index] = !newExpanded[index];
     setExpanded(newExpanded);
